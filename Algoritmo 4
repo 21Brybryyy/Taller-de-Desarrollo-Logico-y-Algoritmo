@@ -1,0 +1,102 @@
+Algoritmo Piedra
+	Definir R, J1, J2, j3 Como Entero;
+	Definir V1, V2, V3 Como Entero; 
+	V1 = 0;
+	V2 = 0;
+	V3 = 0;
+	Escribir "Piedra papel y tijeras";
+	Para R <- 1 Hasta 3 Con Paso 1 Hacer
+		Escribir "Piedra es 2, papel 1, tijero 3";
+		Escribir "Jugador 1:";
+		leer J1;
+		escribir "jugador 2:";
+		Leer J2;
+		Escribir "Jugador 3:";
+		leer J3;
+		Si J1<>J2 y J1<>J3 y J3<>J2 Entonces
+			V1=V1+1;
+			V2=V2+1;
+			V3=V3+1;
+		FinSi
+		Si J1=1 y J2=1 y J3=2 Entonces
+			V1=V1+1; 
+			V2=V2+1;
+		FinSi
+		Si J1=1 y J2=1 y J3=3 Entonces
+			V3=V3+1;
+		FinSi
+		Si J1=1 y J2=2 y J3=1 Entonces
+			V1=V1+1; 
+			V3=V3+1;
+		FinSi
+		Si J1=1 y J2=3 y J3=1 Entonces
+			V2=V2+1;
+		FinSi
+		Si J1=2 y J2=2 y J3=1 Entonces
+			V3=V3+1;
+		FinSi
+		Si J1=2 y J2=2 y J3=3 Entonces
+			V1=V1+1; 
+			V2=V2+1;
+		FinSi
+		Si J1=2 y J2=1 y J3=2 Entonces
+			V2=V2+1;
+		FinSi
+		Si J1=2 y J2=3 y J3=2 Entonces
+			V1=V1+1; 
+			V3=V3+1;
+		FinSi
+		Si J1=3 y J2=3 y J3=1 Entonces
+			V1=V1+1; 
+			V2=V2+1;
+		FinSi
+		Si J1=3 y J2=3 y J3=2 Entonces
+			V3=V3+1;
+		FinSi
+		Si J1=3 y J2=1 y J3=3 Entonces
+			V1=V1+1; 
+			V3=V3+1;
+		FinSi
+		Si J1=3 y J2=2 y J3=3 Entonces
+			V2=V2+1;
+		FinSi
+		Si J1=2 y J2=1 y J3=1 Entonces
+			V2=V2+1; 
+			V3=V3+1;
+		FinSi
+		Si J1=3 y J2=1 y J3=1 Entonces
+			V1=V1+1; 
+		FinSi
+		Si J1=1 y J2=2 y J3=2 Entonces
+			V1=V1+1; 
+		FinSi
+		Si J1=3 y J2=2 y J3=2 Entonces
+			V2=V2+1; 
+			V3=V3+1;
+		FinSi
+		Si J1=1 y J2=3 y J3=3 Entonces
+			V2=V2+1; 
+			V3=V3+1;
+		FinSi
+		Si J1=2 y J2=3 y J3=3 Entonces
+			V1=V1+1; 
+		FinSi
+		Si J1=J2 y J2=J3 y J1=J3 Entonces
+			V1=V1+0;
+			V2=V2+0;
+			V3=V3+0;
+		FinSi
+		Escribir "los puntos del jugador 1 son:",V1;
+		Escribir "los puntos del jugador 2 son:",V2;
+		Escribir "los puntos del jugador 3 son:",V3;
+	FinPara
+	Si (V1>V2 y V1>V3) o (V2=V3 y V1<>V2) Entonces
+		Escribir "El ganador es el jugador 1";
+	FinSi
+	Si (V2>V3 y V2>V1) o (V1=V3 y V2<>V1) Entonces
+		Escribir "El ganador es el jugador 2";
+	FinSi
+	Si (V3>V2 y V3>V1) o (V2=V1 y V3<>V2) Entonces
+		Escribir "El ganador es el jugador 3";
+	FinSi
+FinAlgoritmo
