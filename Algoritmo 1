@@ -1,0 +1,12 @@
+Algoritmo InteresCompuesto
+         {
+	Definir D, A, It, V Como Real;
+	It <- 0.06;
+	Escribir "Ingrese la cantidad de Dinero:";
+	Leer D;
+	Escribir "Ingrese la cantidad de años:";
+	Leer A;
+	V <- D*(1+It)^A;
+	{Escribir "El valor total es de:", V;}
+          }
+FinAlgoritmo
